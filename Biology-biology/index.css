@@ -1,0 +1,126 @@
+/*   Description    */
+
+/* Cardbox */
+
+.cardbox__card {
+    align-items: center;
+    width: 100vw;
+    height: 511px;
+    box-shadow: inset 0px 10px 15px 0px #00000033;
+}
+
+.card__title {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.card {
+    align-items: stretch;
+    justify-content: space-around;
+    width: 900px;
+    margin-right: 255px;
+}
+
+.card__part {
+    display: block;
+    text-align: left;
+}
+
+.card__line {
+    width: 4px;
+    height: 300px;
+    background-color: #EEF6F6;
+    margin: 0px 15px;
+}
+
+.card__part h2,
+.card__part a,
+.card__part p {
+    margin-bottom: 5px;
+    font-size: 30px;
+    display: block;
+}
+
+.card__part h2 {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.card__part a {
+    cursor: pointer;
+    transition: 0.75s ease;
+}
+
+.card__part a::after {
+    background-color: #EEF6F6;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    transition: 0.75s ease;
+}
+
+
+.card__part a:hover::after {
+    width: 100%;
+}
+
+/* copyright */
+
+.biology__copyright {
+    height: 100px;
+    width: 100vw;
+}
+
+.biology__copyright div h1 {
+    color: #545A51;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.copyright__line {
+    margin-top: 6px ;
+    background-color: #920384;
+    height: 6px;
+    width: 100vw;
+}
+
+/* colors */
+
+.first {
+    background-color: #BC3838;
+}
+
+.second {
+    background-color: #38C18A;
+}
+
+.third {
+    background-color: #1884B5;
+}
+
+.fourth {
+    background-color: #BCB719;
+}
+
+.fifth {
+    background-color: #5CB52F;
+}
+
+.sixth {
+    background-color: #7770BF;
+}
+
+.seventh {
+    background-color: #C64C92;
+}
+
+.eigth {
+    background-color: #CB850E;
+}
+
+.ninth {
+    background-color: #920384;
+    box-shadow: inset 0px 0px 15px 10px #00000022;
+}
