@@ -1,0 +1,58 @@
+.theme__ask,
+.theme__answer {
+    font-size: 25px;
+    color: #545A51;
+}
+
+.theme__ask {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.theme__line {
+    height: 2px;
+    width: 850px;
+    background-color: #545A51;
+}
+
+.theme__answer {
+    display: flex;
+    margin: 15px 0px 0px 34px;
+}
+
+.answer__check{
+    padding-left: 34px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
+
+.check__input{
+    position: absolute;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.check__box{
+    position: absolute; 
+    display: block;
+    margin-left: -38px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../../assets/img/check.png);
+    background-size: cover;
+}
+
+.check__input:checked + .check__box{
+    background-image: url(../../assets/img/checked.png);
+}
+
+.test__button{
+    background-color: green;
+}
+
+
+
+

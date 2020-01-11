@@ -1,0 +1,49 @@
+.left {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.biology__content {
+    text-align: center;
+}
+
+
+.content__theme {
+    background-color: #EEF6F6;
+    background-image: url(../../assets/img/fon.png);
+    box-shadow: inset 0px 0px 15px 10px #00000033;
+    width: 100vw;
+    padding: 20px 0px 100px 0px;
+}
+
+.content__theme li {
+    margin: 80px 0px 0px 180px;
+}
+
+.theme__title,
+.theme__other a {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.theme__title {
+    color: #545A51;
+    margin-left: 5px;
+}
+
+.theme__line {
+    height: 2px;
+    width: 850px;
+    background-color: #545A51;
+}
+
+.theme__other a {
+    cursor: pointer;
+    display: block;
+    color: #54973C;
+    margin: 5px 0px 0px 30px;
+}
+
+.theme__other a:hover {
+    color: #6BBE4E;
+}
