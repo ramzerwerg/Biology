@@ -31,7 +31,7 @@ let quest = [
     {
         text: "3. Клеточное строение подразумевает, что:",
         answers: ["клетки состоят из цитоплазмы, клеточной оболочки и органоидов",
-            "структурной и функциональной единицей живых организмов является клетка(п)",
+            "структурной и функциональной единицей живых организмов является клетка",
             "живые организмы могут состоять из клеток",
             "живые организмы могут состоять из клеток"],
         correctansw: 1
@@ -69,7 +69,7 @@ let quest = [
 
     {
         text: "7. Что происходит с сосудами человека, когда он стоит на морозе:",
-        answers: ["сужаются(п)",
+        answers: ["сужаются",
             "расширяются",
             "остаются неизменными",
             "поочередно то сужаются, то расширяются для того, чтобы быстро согреть организм"],
@@ -89,7 +89,7 @@ let quest = [
         text: "9. Как расшифровывается АТФ",
         answers: ["аденинтифосфорная кислота",
             "амоксициклинтриофосфорная кислота",
-            "аденинтрифосфорная кислота(п)",
+            "аденинтрифосфорная кислота",
             "амоксициклинтрифосфорная кислота"],
         correctansw: 2
     },
@@ -103,7 +103,7 @@ let quest = [
         correctansw: 3
     }]
 
-// Функций для создания элемента fragment
+// Функция для создания элемента fragment
 function createlist() {
     let fragment = new DocumentFragment(); // создание нового фрагмента в документе
 
@@ -112,7 +112,7 @@ function createlist() {
 
         let li = document.createElement('li');
         li.setAttribute('class', 'left column ');
-        li.setAttribute('id', 'qest' + i);
+        li.setAttribute('id', 'quest' + i);
 
         let p = document.createElement('p');
         p.setAttribute('class', 'theme__ask');
@@ -154,9 +154,10 @@ test.append(createlist()); // Добавление в text всех создан
 
 function checktest() {
     let answcount = 0;
-    let check = [],
-        answnum = [];
+    let check = []; 
+    // let answnum = [];
     let qestnum = document.getElementById('quest' + k).div.label.input.getAttribute(checked);
+    let answnum = document.getElementById('answer' + k);
 
     for (let z = 0; z <= quest.length - 1; z++) {
         check.push(0);
@@ -166,10 +167,10 @@ function checktest() {
         for (let y = 0; y <= quest[k].answers.length; y++) { // проверяем в каждом вопросе кол-во и номер ответов ответов
             if (qestnum == true) { // кол-во ответов
                 answcount += 1;
-                answnum.push(y)
+                // answnum.push(y)
             }
         }
-        // if (qestnum &&  ) {
+        // if (qestnum) {
         //     check[k] = 1;
         // }
     }

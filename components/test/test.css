@@ -9,12 +9,6 @@
     margin-left: 5px;
 }
 
-.theme__line {
-    height: 2px;
-    width: 850px;
-    background-color: #545A51;
-}
-
 .theme__answer {
     display: flex;
     margin: 15px 0px 0px 34px;
@@ -50,9 +44,22 @@
 }
 
 .test__button{
-    background-color: green;
+    background-color: #6FCB6F;
+    width: 250px;
+    height: 42px;
+    border-radius: 21px;
+    color: #EAF8E6;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 5px;
+    margin-left: 200px;
+    border: 0;
+    transition: 0.25s ease;
 }
 
+.test__button:hover{
+    background-color: #5FAF5F;
+}
 
 
 
