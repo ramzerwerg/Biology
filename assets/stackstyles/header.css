@@ -146,7 +146,7 @@ p {
     box-shadow: 0px 0px 5px 2px #00000022;
 }
 
-.nav__butt a {
+.nav__butt > a {
     display: flex;
 
     height: 95%;
@@ -155,11 +155,11 @@ p {
     justify-content: center;
 }
 
-.nav__butt a:hover p {
+.nav__butt > a:hover p {
     font-size: 30.8px;
 }
 
-.nav__butt a p {
+.nav__butt > a > p {
     transition: 0.4s ease;
     display: block;
     font-size: 30px;
