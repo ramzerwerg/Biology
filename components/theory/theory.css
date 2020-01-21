@@ -194,8 +194,3 @@
 .topic_description > p > a:hover {
 	color: #73D451;
 }
-
-
-body {
-	opacity: 0; /* убит нахуй */
-}
