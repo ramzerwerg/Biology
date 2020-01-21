@@ -147,7 +147,7 @@ p {
     box-shadow: 0px 0px 5px 2px #00000022;
 }
 
-.nav__butt a {
+.nav__butt>a {
     display: flex;
 
     height: 95%;
@@ -156,17 +156,17 @@ p {
     justify-content: center;
 }
 
-.nav__butt a:hover p {
+.nav__butt>a:hover p {
     font-size: 30.8px;
 }
 
-.nav__butt a p {
+.nav__butt>a>p {
     transition: 0.4s ease;
     display: block;
     font-size: 30px;
 }
 
-.active{
+.active {
     background-color: #55A43A;
     width: 300px;
     height: 105%;
@@ -202,7 +202,6 @@ p {
 .biology__content h1 {
     display: block;
     color: #545A51;
-    line-height: 93px;
 }
 
 /* footer */
@@ -217,17 +216,358 @@ footer {
 
 .footer__line {
     background-color: #73D451;
-    
+
     width: 100vw;
     height: 6px;
-    
+
     margin-bottom: 6px;
 }
 
 .footer__authors {
     font-size: 25px;
-    
+
     background-color: #73D451;
     width: 100vw;
     height: 100px;
+}
+
+/*== media query ======================== */
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1100px) {
+    .biology__title p:first-child {
+        font-size: 40px;
+        line-height: 40px;
+        margin-top: 20px;
+    }
+
+    .biology__title p {
+        line-height: 30px;
+    }
+
+    .title__line {
+        height: 2px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+
+    .biology__poster {
+        margin-top: 25px;
+        width: 1520px;
+        height: 468;
+    }
+
+    /* Navbar */
+    .nav__section {
+        margin-bottom: 6px;
+    }
+
+    .nav__line {
+        width: 1170px;
+        margin-bottom: 15px;
+    }
+
+    .biology__nav img {
+        width: 1535px;
+        height: 81px;
+
+    }
+
+    .biology__nav ul {
+        width: 1302px;
+        height: 65px;
+
+        bottom: 65px;
+    }
+
+    .nav__butt {
+        width: 275px;
+    }
+
+    .nav__butt:hover {
+        width: 300px;
+    }
+
+    .nav__butt>a {
+        height: 95%;
+    }
+
+    .nav__butt>a:hover p,
+    .active {
+        font-size: 30.8px;
+    }
+
+    .nav__butt>a>p,
+    .biology__title p,
+    .nav__section {
+        font-size: 30px;
+    }
+
+    .active {
+        width: 300px;
+        height: 105%;
+    }
+
+    /* Biology Content */
+
+    .biology__content>div {
+        height: 115px;
+    }
+
+    .content__line {
+        height: 4px;
+    }
+
+    .content__line:first-child {
+        margin-top: 4px;
+    }
+
+    .content__line:last-child {
+        margin-bottom: 4px;
+    }
+
+    .biology__content h1 {
+        line-height: 93px;
+    }
+
+    /* footer */
+
+    footer {
+        height: 100px;
+    }
+
+    .footer__line {
+        height: 4px;
+        margin-bottom: 4px;
+    }
+
+    .footer__authors {
+        font-size: 25px;
+        height: 100px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .biology__title p:first-child {
+        font-size: 40px;
+        line-height: 40px;
+        margin-top: 20px;
+    }
+
+    .biology__title p {
+        line-height: 30px;
+    }
+
+    .title__line {
+        height: 2px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+
+    .biology__poster {
+        margin-top: 25px;
+        width: 1520px;
+        height: 468;
+    }
+
+    /* Navbar */
+    .nav__section {
+        margin-bottom: 6px;
+    }
+
+    .nav__line {
+        width: 1170px;
+        margin-bottom: 15px;
+    }
+
+    .biology__nav img {
+        width: 1535px;
+        height: 81px;
+
+    }
+
+    .biology__nav ul {
+        width: 1302px;
+        height: 65px;
+
+        bottom: 65px;
+    }
+
+    .nav__butt {
+        width: 275px;
+    }
+
+    .nav__butt:hover {
+        width: 300px;
+    }
+
+    .nav__butt>a {
+        height: 95%;
+    }
+
+    .nav__butt>a:hover p,
+    .active {
+        font-size: 30.8px;
+    }
+
+    .nav__butt>a>p,
+    .biology__title p,
+    .nav__section {
+        font-size: 30px;
+    }
+
+    .active {
+        width: 300px;
+        height: 105%;
+    }
+
+    /* Biology Content */
+
+    .biology__content>div {
+        height: 110px;
+    }
+
+    .content__line {
+        height: 4px;
+    }
+
+    .content__line:first-child {
+        margin-top: 4px;
+    }
+
+    .content__line:last-child {
+        margin-bottom: 4px;
+    }
+
+
+    /* footer */
+
+    footer {
+        height: 80px;
+    }
+
+    .footer__line {
+        height: 4px;
+        margin-bottom: 4px;
+    }
+
+    .footer__authors {
+        font-size: 20px;
+        height: 100px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .biology__title p:first-child {
+        font-size: 40px;
+        line-height: 40px;
+        margin-top: 20px;
+    }
+
+    .biology__title p {
+        line-height: 30px;
+    }
+
+    .title__line {
+        height: 2px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+
+    .biology__poster {
+        margin-top: 25px;
+        width: 1520px;
+        height: 468;
+    }
+
+    /* Navbar */
+    .nav__section {
+        margin-bottom: 6px;
+    }
+
+    .nav__line {
+        width: 1170px;
+        margin-bottom: 15px;
+    }
+
+    .biology__nav img {
+        width: 1535px;
+        height: 81px;
+
+    }
+
+    .biology__nav ul {
+        width: 1302px;
+        height: 65px;
+
+        bottom: 65px;
+    }
+
+    .nav__butt {
+        width: 275px;
+    }
+
+    .nav__butt:hover {
+        width: 300px;
+    }
+
+    .nav__butt>a {
+        height: 95%;
+    }
+
+    .nav__butt>a:hover p,
+    .active {
+        font-size: 30.8px;
+    }
+
+    .nav__butt>a>p,
+    .biology__title p,
+    .nav__section {
+        font-size: 30px;
+    }
+
+    .active {
+        width: 300px;
+        height: 105%;
+    }
+
+    /* Biology Content */
+
+    .biology__content>div {
+        height: 115px;
+    }
+
+    .content__line {
+        height: 6px;
+    }
+
+    .content__line:first-child {
+        margin-top: 6px;
+    }
+
+    .content__line:last-child {
+        margin-bottom: 6px;
+    }
+
+    .biology__content h1 {
+        line-height: 93px;
+    }
+
+    /* footer */
+
+    footer {
+        height: 100px;
+    }
+
+    .footer__line {
+        height: 6px;
+        margin-bottom: 6px;
+    }
+
+    .footer__authors {
+        font-size: 25px;
+        height: 100px;
+    }
 }

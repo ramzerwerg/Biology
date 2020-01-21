@@ -80,7 +80,7 @@
 }
 
 .copyright__line {
-    margin-top: 6px ;
+    margin-top: 6px;
     background-color: #920384;
     height: 6px;
     width: 100vw;
@@ -123,4 +123,196 @@
 .ninth {
     background-color: #920384;
     box-shadow: inset 0px 0px 15px 10px #00000022;
+}
+
+/*== media query ======================== */
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1100px) {
+    .cardbox__card {
+        height: 380px;
+    }
+
+    .card {
+        margin-right: 150px;
+        width: 700px;
+    }
+
+    .card__line {
+        width: 2px;
+        height: 210px;
+    }
+
+    .card__part h2,
+    .card__part a,
+    .card__part p,
+    .card__title {
+        font-size: 19px;
+    }
+
+    /* copyright */
+
+    .biology__copyright {
+        height: 100px;
+    }
+
+    .biology__copyright div h1 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .copyright__line {
+        margin-top: 6px;
+        height: 6px;
+        width: 100vw;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .cardbox__card {
+        height: 430px;
+    }
+
+    .card {
+        margin-right: 220px;
+        width: 800px;
+    }
+
+    .card__line {
+        width: 2px;
+        height: 250px;
+    }
+
+    .card__part h2,
+    .card__part a,
+    .card__part p,
+    .card__title {
+        font-size: 24px;
+    }
+
+    /* copyright */
+
+    .biology__copyright {
+        height: 80px;
+    }
+
+    .biology__copyright div h1 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .copyright__line {
+        margin-top: 4px;
+        height: 4px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .cardbox__card {
+        height: 511px;
+    }
+
+    .card {
+        margin-right: 255px;
+        width: 900px;
+    }
+
+    .card__part {
+        display: block;
+        text-align: left;
+    }
+
+    .card__line {
+        width: 3px;
+        height: 300px;
+    }
+
+    .card__part h2,
+    .card__part a,
+    .card__part p,
+    .card__title {
+        font-size: 30px;
+    }
+
+    /* copyright */
+
+    .biology__copyright {
+        height: 100px;
+    }
+
+    .biology__copyright div h1 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .copyright__line {
+        height: 6px;
+        width: 100vw;
+    }
+}
+
+
+
+/* ==== preloader =================================================== */
+
+
+.loader {
+    background: none repeat scroll 0 0 #fff;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+
+.loader .loader_inner {
+    animation: animate 1.5s linear infinite;
+    clip: rect(0, 80px, 80px, 40px);
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(220deg)
+    }
+}
+
+.loader .loader_inner:after {
+    animation: animate2 1.5s ease-in-out infinite;
+    clip: rect(0, 80px, 80px, 40px);
+    content: '';
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+}
+
+@keyframes animate2 {
+    0% {
+        box-shadow: inset #b3dfd8 0 0 0 17px;
+        transform: rotate(-140deg);
+    }
+
+    50% {
+        box-shadow: inset #b3dfd8 0 0 0 2px;
+    }
+
+    100% {
+        box-shadow: inset #b3dfd8 0 0 0 17px;
+        transform: rotate(140deg);
+    }
 }

@@ -34,7 +34,7 @@ let quest = [
             "структурной и функциональной единицей живых организмов является клетка",
             "живые организмы могут состоять из клеток",
             "живые организмы могут состоять из клеток"],
-        correctansw: 1
+        correctansw: [1]
     },
 
     {
@@ -54,7 +54,7 @@ let quest = [
             "саморегуляция",
             "экскреция",
             "экскреция"],
-        correctansw: 2
+        correctansw: [2]
     },
 
     {
@@ -73,7 +73,7 @@ let quest = [
             "расширяются",
             "остаются неизменными",
             "поочередно то сужаются, то расширяются для того, чтобы быстро согреть организм"],
-        correctansw: 1
+        correctansw: [1]
     },
 
     {
@@ -82,7 +82,7 @@ let quest = [
             "особенности строения, жизнедеятельности и поведения, обеспечивающие выживание и размножение в определённой среде",
             "эволюционное развитие вида",
             "способность организмов приобретать новые свойства и признаки"],
-        correctansw: 3
+        correctansw: [3]
     },
 
     {
@@ -91,7 +91,7 @@ let quest = [
             "амоксициклинтриофосфорная кислота",
             "аденинтрифосфорная кислота",
             "амоксициклинтрифосфорная кислота"],
-        correctansw: 2
+        correctansw: [2]
     },
 
     {
@@ -100,7 +100,7 @@ let quest = [
             "способность организмов воспроизводить себе подобных",
             "способность к росту и индивидуальному развитию",
             "индивидуальное развитие от зиготы до смерти"],
-        correctansw: 3
+        correctansw: [3]
     }]
 
 // Функция для создания элемента fragment
@@ -108,11 +108,9 @@ function createlist() {
     let fragment = new DocumentFragment(); // создание нового фрагмента в документе
 
     for (let i = 0; i <= quest.length - 1; i++) { // Добавление в fragment элементов li (p, div(label, span, input))
-        let num1 = i;
 
         let li = document.createElement('li');
-        li.setAttribute('class', 'left column ');
-        li.setAttribute('id', 'quest' + i);
+        li.setAttribute('class', 'left column quest' + i);
 
         let p = document.createElement('p');
         p.setAttribute('class', 'theme__ask');
@@ -123,9 +121,8 @@ function createlist() {
 
         for (let z = 0; z <= quest[i].answers.length - 1; z++) {
             let label = document.createElement('label');
-            label.setAttribute('class', 'answer__check left');
-            label.setAttribute('id', 'answ' + num1);
-            label.innerHTML = quest[i].answers[z]
+            label.setAttribute('class', 'answer__check left answ' + z);
+            label.innerHTML = quest[i].answers[z];
 
             let input = document.createElement('input');
             input.setAttribute('class', 'check__input');
@@ -142,7 +139,6 @@ function createlist() {
 
         li.append(p);
         li.append(div);
-
         fragment.append(li);
     }
 
@@ -153,25 +149,28 @@ test.append(createlist()); // Добавление в text всех создан
 // Проверка правильности ответов
 
 function checktest() {
-    let answcount = 0;
-    let check = []; 
-    // let answnum = [];
-    let qestnum = document.getElementById('quest' + k).div.label.input.getAttribute(checked);
-    let answnum = document.getElementById('answer' + k);
-
-    for (let z = 0; z <= quest.length - 1; z++) {
-        check.push(0);
-    }
-
+    let answnum = [];
     for (let k = 0; k <= quest.length - 1; k++) { // Просматриваем каждый вопрос
-        for (let y = 0; y <= quest[k].answers.length; y++) { // проверяем в каждом вопросе кол-во и номер ответов ответов
-            if (qestnum == true) { // кол-во ответов
-                answcount += 1;
-                // answnum.push(y)
+        answnum.push({ answ: [] });
+
+        for (let y = 0; y <= quest[k].answers.length - 1; y++) { // проверяем в каждом вопросе кол-во и номер ответов
+            let questnum = document.querySelector('.quest' + k + ' > .theme__answer > .answ' + y + ' > input[type=checkbox]');
+            if (questnum.checked) {
+                answnum[k].answ.push(y);
             }
         }
-        // if (qestnum) {
-        //     check[k] = 1;
-        // }
     }
-}
+
+    let count = 0;
+    for (let l = 0; l <= quest.length - 1; l++) {
+        console.log(quest[l].correctansw + ' vs ' + answnum[l].answ)
+        for (let m = 0; m <= quest[l].answers.length - 1; m++) {
+            if (answnum[l].answ[m] == quest[l].correctansw[m]) {
+                count += 1 / quest[l].correctansw.length;
+            }
+        }
+        console.log(quest.length / 100 * count)
+    }
+    console.log("Итого: " + ((quest.length / 100 * count).toFixed(2)) * 100)
+
+} // Нужно записать в массив в каждый индекс номера выбраных ответов, потом этот массив сравить с массивом quest обьектом correctansw
