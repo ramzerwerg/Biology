@@ -4,9 +4,14 @@
     color: #545A51;
 }
 
+#test li {
+    width: 900px;
+}
+
 .theme__ask {
     font-weight: bold;
     margin-left: 5px;
+    text-align: left;
 }
 
 .theme__answer {
@@ -14,7 +19,7 @@
     margin: 15px 0px 0px 34px;
 }
 
-.answer__check{
+.answer__check {
     padding-left: 34px;
     margin-bottom: 20px;
     display: flex;
@@ -23,14 +28,14 @@
     text-align: left;
 }
 
-.check__input{
+.check__input {
     position: absolute;
     appearance: none;
     -webkit-appearance: none;
 }
 
-.check__box{
-    position: absolute; 
+.check__box {
+    position: absolute;
     display: block;
     margin-left: -38px;
     width: 30px;
@@ -39,11 +44,11 @@
     background-size: cover;
 }
 
-.check__input:checked + .check__box{
+.check__input:checked+.check__box {
     background-image: url(../../assets/img/checked.png);
 }
 
-.test__button{
+.test__button {
     background-color: #6FCB6F;
     width: 250px;
     height: 42px;
@@ -57,9 +62,128 @@
     transition: 0.25s ease;
 }
 
-.test__button:hover{
+.test__button:hover {
     background-color: #5FAF5F;
 }
 
+@media only screen and (max-width: 1199px) {
 
+    .theme__ask,
+    .theme__answer {
+        font-size: 17px;
+    }
 
+    .theme__ask {
+        margin-left: 5px;
+    }
+    #test li {
+        width: 800px;
+    }
+    .theme__answer {
+        margin: 15px 0px 0px 34px;
+    }
+
+    .answer__check {
+        padding-left: 28px;
+        margin-bottom: 12px;
+    }
+
+    .check__box {
+        margin-left: -28px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .test__button {
+        width: 150px;
+        height: 27px;
+        margin-top: 20px;
+        border-radius: 21px;
+        font-size: 12px;
+        padding-top: 2px;
+        margin-left: 130px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .theme__ask,
+    .theme__answer {
+        font-size: 21px;
+    }
+
+    .theme__ask {
+        margin-left: 5px;
+    }
+
+    #test li {
+        width: 900px;
+    }
+
+    .theme__answer {
+        margin: 15px 0px 0px 30px;
+    }
+
+    .answer__check {
+        padding-left: 30px;
+        margin-bottom: 15px;
+    }
+
+    .check__box {
+        margin-left: -30px;
+        margin-top: 2px;
+        width: 23px;
+        height: 23px;
+    }
+
+    .test__button {
+        width: 180px;
+        height: 32px;
+        margin-top: 20px;
+        border-radius: 21px;
+        font-size: 14px;
+        padding-top: 3px;
+        margin-left: 150px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .theme__ask,
+    .theme__answer {
+        font-size: 25px;
+    }
+
+    #test li {
+        width: 1500px;
+    }
+
+    .theme__ask {
+        margin-left: 5px;
+    }
+
+    .theme__answer {
+        margin: 15px 0px 0px 34px;
+    }
+
+    .answer__check {
+        padding-left: 34px;
+        margin-bottom: 20px;
+    }
+
+    .check__box {
+        margin-left: -38px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .test__button {
+        width: 250px;
+        height: 42px;
+        margin-top: 26px;
+        border-radius: 21px;
+        font-size: 20px;
+        padding-top: 5px;
+        margin-left: 200px;
+    }
+}
