@@ -21,7 +21,7 @@
 }
 
 .theme__title,
-.theme__other > a {
+.theme__other>a {
     font-size: 25px;
     font-weight: bold;
 }
@@ -46,4 +46,76 @@
 
 .theme__other a:hover {
     color: #6BBE4E;
+}
+
+@media only screen and (max-width: 1199px) {
+    .content__theme {
+        padding: 20px 0px 70px 0px;
+    }
+
+    .content__theme li {
+        margin: 70px 0px 0px 120px;
+    }
+
+    .theme__title,
+    .theme__other>a {
+        font-size: 17px;
+    }
+
+    .theme__title {
+        margin-left: 5px;
+    }
+
+    .theme__line {
+        height: 2px;
+        width: 620px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .content__theme {
+        padding: 20px 0px 60px 0px;
+    }
+
+    .content__theme li {
+        margin: 70px 0px 0px 140px;
+    }
+
+    .theme__title,
+    .theme__other>a {
+        font-size: 21px;
+    }
+
+    .theme__title {
+        margin-left: 5px;
+    }
+
+    .theme__line {
+        height: 2px;
+        width: 760px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .content__theme {
+        padding: 20px 0px 100px 0px;
+    }
+
+    .content__theme li {
+        margin: 80px 0px 0px 180px;
+    }
+
+    .theme__title,
+    .theme__other>a {
+        font-size: 25px;
+    }
+
+    .theme__title {
+        margin-left: 5px;
+    }
+
+    .theme__line {
+        height: 2px;
+        width: 850px;
+    }
 }
