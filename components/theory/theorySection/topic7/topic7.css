@@ -1,4 +1,4 @@
-.theory__title {
+﻿.theory__title {
     align-self: center;
 }
 /* стили для текста */
@@ -21,7 +21,7 @@
 .video__theme {
     display: flex;
     flex-direction: row nowrap;
-    padding: 0 100px 10px;
+    padding: 0 100px 30px;
     text-decoration: none;
 }
 /*блок видео */
