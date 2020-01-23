@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../../../../fonts/Montserrat-Medium.ttf);
+}
+
 .theory__title {
     align-self: center;
 }
